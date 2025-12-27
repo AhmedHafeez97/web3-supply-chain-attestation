@@ -1,0 +1,5 @@
+{"deviceId":"COLD-TRUCK-07","seq":1,"ts":1766790000,"tempC_x100":425,"rh_x100":5534,"shock_mg":1200,"battery_mv":3710}
+{"deviceId":"COLD-TRUCK-07","seq":2,"ts":1766790060,"tempC_x100":430,"rh_x100":5520,"shock_mg":980,"battery_mv":3705}
+{"deviceId":"COLD-TRUCK-07","seq":3,"ts":1766790120,"tempC_x100":445,"rh_x100":5505,"shock_mg":1500,"battery_mv":3698}
+{"deviceId":"COLD-TRUCK-07","seq":4,"ts":1766790180,"tempC_x100":460,"rh_x100":5490,"shock_mg":1100,"battery_mv":3692}
+{"deviceId":"COLD-TRUCK-07","seq":5,"ts":1766790240,"tempC_x100":455,"rh_x100":5488,"shock_mg":1000,"battery_mv":3689}
