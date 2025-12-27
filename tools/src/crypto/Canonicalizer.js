@@ -1,0 +1,15 @@
+export class Canonicalizer {
+    static recordToCanonicalJson(record) {
+        //Fixed key oder
+        const canon = {
+            deviceId: record.deviceId,
+            seq: record.seq,
+            ts: record.ts,
+            tempC_x100: record.tempC_x100,
+            rh_x100: record.rh_x100,
+            shock_mg: record.shock_mg,
+            battery_mv: record.battery_mv,
+        };
+        return JSON.stringify(canon);
+    }
+}
