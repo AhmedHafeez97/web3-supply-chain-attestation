@@ -24,7 +24,7 @@ sensor → off-chain attestor → hash chain → on-chain commitment → buyer v
 3. Each record is hashed
 4. Hashes are chained into a single batch commitment
 
-## Run the demo
+<!-- ## Run the demo
 ```bash
 npm install
-node tools/load_records.js
+node tools/load_records.js -->
