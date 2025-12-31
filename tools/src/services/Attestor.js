@@ -13,6 +13,18 @@ export class Attestor {
         const commitment = HashChain.compute(records);
         const deviceIdHash = Hasher.hashDeviceId(meta.deviceId);
 
+        const phObj = AttestationPayload.payloadHashObject({
+            deviceIdHash,
+            batchId: this.batchId,
+            startSeq: meta.startSeq,
+            endSeq: meta.endSeq,
+            startTs: meta.startTs,
+            endTs: meta.endTs,
+            commitment,
+        });
+
+        const payloadHash = Hasher.hashPayload(phObj);
+
         const payload = new AttestationPayload({
             deviceIdHash,
             batchId: this.batchId,
@@ -20,8 +32,10 @@ export class Attestor {
             endSeq: meta.endSeq,
             startTs: meta.startTs,
             endTs: meta.endTs,
-            commitment: commitment,
+            commitment,
+            payloadHash,
         });
+
 
         return { meta, commitment, payload };
     }

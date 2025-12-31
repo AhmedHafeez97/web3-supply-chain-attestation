@@ -12,4 +12,17 @@ export class Canonicalizer {
         };
         return JSON.stringify(canon);
     }
+
+    static payloadToCanonicalJson(payloadHashObj) {
+        const canon = {
+            batchId: payloadHashObj.batchId,
+            deviceIdHash: payloadHashObj.deviceIdHash,
+            commitment: payloadHashObj.commitment,
+            startSeq: payloadHashObj.startSeq,
+            endSeq: payloadHashObj.endSeq,
+            startTs: payloadHashObj.startTs,
+            endTs: payloadHashObj.endTs,
+        };
+        return JSON.stringify(canon);
+    }
 }

@@ -1,5 +1,5 @@
 export class AttestationPayload {
-    constructor({deviceIdHash, batchId, startSeq, endSeq, startTs, endTs, commitment}){
+    constructor({deviceIdHash, batchId, startSeq, endSeq, startTs, endTs, commitment, payloadHash}){
         this.deviceIdHash = deviceIdHash;
         this.batchId = batchId;
         this.startSeq = startSeq;
@@ -7,7 +7,29 @@ export class AttestationPayload {
         this.startTs = startTs;
         this.endTs = endTs;
         this.commitment = commitment;
+
+        this.payloadHash = payloadHash
         
         Object.freeze(this);
+    }
+
+    static payloadHashObject({
+        deviceIdHash,
+        batchId,
+        startSeq,
+        endSeq,
+        startTs,
+        endTs,
+        commitment,
+    }) {
+        return {
+            batchId,
+            deviceIdHash,
+            commitment,
+            startSeq,
+            endSeq,
+            startTs,
+            endTs,
+        };
     }
 }

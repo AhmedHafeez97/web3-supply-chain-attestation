@@ -15,4 +15,9 @@ export class Hasher {
         const canon = Canonicalizer.recordToCanonicalJson(record);
         return Hasher.hashUtf8(canon);
     }
+
+    static hashPayload(payloadHashObj){
+        const canon = Canonicalizer.payloadToCanonicalJson(payloadHashObj);
+        return Hasher.hashUtf8(canon);
+    }
 }
